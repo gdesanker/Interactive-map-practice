@@ -6,9 +6,8 @@ title: "Waste Lands - America's forgotten nuclear legacy"
 author: Philipp Ottolinger
 output: 
   flexdashboard::flex_dashboard:
-    theme: journal
-    social: menu
-    source_code: embed
+    orientation: columns
+    vertical_layout: fill
 ---
 
 ```{r setup, include=FALSE}
@@ -76,12 +75,16 @@ neighbdata.red[][[6]] <- round(neighbdata.red[][[6]], 1)
 
 ```
 
+Page 1
+================================
 
-Column {data-width=350}
+<!-- each page is a differeny flexdashboard ui, but can the flexdashboard type change? --> 
+
+Column {data-width=650}
 -----------------------------------------------------------------------
 
 
-### Existing and Percent canopy interactive
+### Panel A
 
 ```{r}
 
@@ -163,9 +166,9 @@ test
 ```
 
 
-Column {data-width=50}
+Column {data-width=350}
 -----------------------------------------------------------------------
-## Existing Percent Canopy
+### Panel B
 
 You can also embed plots, for example:
 
@@ -173,7 +176,13 @@ You can also embed plots, for example:
 plot(neighbdata.red["ExistingPctCanopy"],)
 ```
 
-## Percent Canopy
+Page 2
+================================
+
+Column { vertical_layout: scroll}
+-----------------------------------------------------------------------
+
+### Panel A 
 
 ```{r}
 
